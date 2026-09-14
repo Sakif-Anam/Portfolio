@@ -1,0 +1,259 @@
+:root {
+  --ink: #1b1b18;
+  --paper: #f7f4ee;
+  --indigo: #202b45;
+  --indigo-light: #33426a;
+  --gold: #c1892e;
+  --teal: #2e6b60;
+  --line: #d8d2c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  background: var(--indigo);
+  color: var(--paper);
+}
+
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+
+header h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: -0.01em;
+}
+
+header p.tagline {
+  margin-top: 6px;
+  color: #c9cfde;
+  font-size: 1.05rem;
+  max-width: 34ch;
+}
+
+header nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #dce1ee;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+}
+
+header nav a:hover {
+  color: #fff;
+  border-bottom-color: var(--gold);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  border-top: 1px solid var(--line);
+  padding: 56px 0;
+}
+
+section h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-bottom: 28px;
+}
+
+/* ---------- About ---------- */
+
+#about .about-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+#about img {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+#about .about-text p {
+  max-width: 56ch;
+  margin-bottom: 14px;
+  color: #3a3a34;
+}
+
+/* ---------- Skills ---------- */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+}
+
+.skill-list li {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88rem;
+  padding: 7px 14px;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+}
+
+.skill-list li::before {
+  content: "> ";
+}
+
+/* ---------- Projects ---------- */
+
+.project-grid {
+  display: flex;
+  gap: 48px;
+}
+
+.project-grid article {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.project-grid h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.project-meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.project-grid p {
+  color: #3a3a34;
+  font-size: 0.97rem;
+}
+
+.project-grid a.repo-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* ---------- Contact ---------- */
+
+#contact .contact-intro {
+  margin-bottom: 28px;
+  color: #3a3a34;
+}
+
+#contact .contact-intro a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+}
+
+form {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #6b6a60;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  padding: 8px 2px;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--indigo);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+button {
+  align-self: flex-start;
+  margin-top: 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 12px 26px;
+  background: var(--indigo);
+  color: var(--paper);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--indigo-light);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  background: var(--indigo);
+  color: #a9afc2;
+  font-size: 0.88rem;
+}
+
+footer .wrap {
+  padding: 26px 40px;
+  display: flex;
+  justify-content: space-between;
+}
